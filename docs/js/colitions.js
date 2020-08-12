@@ -175,7 +175,6 @@ function animate(){
         mouseParticle.x = mouse.x;
         mouseParticle.y = mouse.y;
         mouseParticle.draw();
-        mouseParticle.update();
     }
 }
 init()
