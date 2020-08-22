@@ -1,32 +1,344 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Qué es Canvas?</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Canvas</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="jumbotron jumbotron-fluid transparent-jumbo">
-        <div class="container">
-            <h1>Canvas</h1>      
-            <p>Es un elemento de html5 que permite dibujar por medio de código JavaScript</p>
-        </div>
-    </div>
 
-    <div class="container-fluid p-3 my-3 transparent-container text-white ">
-        <h2>My First Bootstrap Page</h2>
-        <p>This is some text.</p>
-    </div>
-    <canvas></canvas>
-    <script src="js/colitions.js"></script>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../img/logo.png" style="width: 10%;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">¿Qué es canvas?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Equipo</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ejemplos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Gravedad</a>
+                            <a class="dropdown-item" href="#">Colisión</a>
+                            <a class="dropdown-item" href="#">Interacción</a>
+                        </div>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="background-overlay text-white py-5">
+            <div class="container py-5">
+                <div class="row d-flex h-100">
+                    <div class="col-sm-6 text-center justify-content-center align-self-center">
+                        <h1>
+                            Canvas
+                        </h1>
+                        <p>¡Dibuja con comandos! Canvas es un elemento de HTML, el cual permite dibujar gráficos
+                            mediante secuencias de comandos (comunmente JavaScript).
+                        </p>
+                        <a href="#" class="btn btn-outline-secondary btn-lg text-white">
+                            Read More
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="../img/logo.png" class="img-fluid d-none d-sm-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FEATURES -->
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-white bg-primary">
+                        <div class="card-body">
+                            <h3>Dinámico</h3>
+                            <p>
+                                Canvas puede añadir interacción con el usuraio con JavaScript, puedes interactuar con el
+                                teclado, el ratón o lo que tú desees.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center border-primary">
+                        <div class="card-body">
+                            <h3>Multipropósito</h3>
+                            <p>
+                                Con canvas tu imaginación es tu límite, crea gráficos, animaciones, juegos, imagenes
+                                estáticas o interactivas, tú eliges.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-primary">
+                        <div class="card-body">
+                            <h3>Fácil de utilizar</h3>
+                            <p>
+                                No necistas muchos conocimientos para empezar a utilizar canvas, en cuestión de minutos
+                                tedrás tus propias creaciones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="m5 text-center bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="m-5">
+                    <h3>¿Qué puedo hacer con canvas?</h3>
+                    <p>
+                        Existen multiples aplicaciones y utilidades para canvas, puesdes crear maravillosos paisajes o
+                        retratos a base de código, sin embargo, si lo tuyo son las matemáticas y las estadísticas,
+                        puedes
+                        utilizar canvas para representar gráficos matemáticos o estadísticos en tiempo real; por otro
+                        lado,
+                        si las físicas se te dan bien o quieres poner a prueba tus conocimientos puesdes crear un
+                        simulador,
+                        así comprobar cómo afectaría al cambiar ciertos parámetros; sin embargo, si estos ejemplos no
+                        cubren
+                        tus necesidades y deseas algo más, puedes crear videojuegos, dependiendo de lo que necesites,
+                        puedes
+                        crear personajes importando y recortando imágenes para utilizarlos como sprites.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACCORDION -->
+    <section class="container text-center p-5">
+        <div class="row">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                ¿Solo puedo hacer eso?
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Claro que no, solo te hemos presentado algunos ejemplos, puedes utilizar
+                            canvas para hacer elementos decorativos o incluso tu propio logo,las pósibilidades son
+                            infinitas,
+                            quien sabe, si te lo propones quizás puedes encontrar la forma de hacer algo que no muchos
+                            se hayan imaginado.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ¿Qué desventajas me presenta canvas?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Algunas limitaciones que posee canvas es no ser responsive,
+                            si elijes un tamaño en específico para trabajar deberás de tomarlo en cuenta; si
+                            tienes demaciadas funciones, demaciadas intacias y/o demaciadas iteraciones tendrás muchos
+                            problemas a la hora de ejecutar los comando, lo que puede realentizar tu computadora o tener
+                            fallos con tu navegador.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                ¿Existen librerías o frameworks especiales para canvas?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Claro que sí, las hay para dibujar grafos, dibujar diagramas uml,
+                            diagramas de flujo, existen motores gráficos para juegos y para crear animaciones.
+                            Entre ellas están
+                            <ul class="list-group">
+                                <!--tips: add .list-group-flush to the .list-group to remove some borders and rounded corners-->
+                                <li class="list-group-item">Collie</li>
+                                <li class="list-group-item">MelonJS</li>
+                                <li class="list-group-item">Threejs</li>
+                                <li class="list-group-item">Blend4Web</li>
+                                <li class="list-group-item">JOINTJS</li>
+                                <li class="list-group-item">MXGRAPH</li>
+                                <li class="list-group-item">DIAGRAM.JS</li>
+                                <li class="list-group-item">D3</li>
+                                <li class="list-group-item">FABRIC.JS</li>
+                                <li class="list-group-item">CYTOSCAPE.JS</li>
+                                <li class="list-group-item">REACT DIAGRAMS</li>
+                                <li class="list-group-item">VIS.JS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="text-center team">
+        <div class="container p-5">
+            <h1 class="text-center text-white">Team</h1>
+            <p class="text-white">
+                Adipisicing unde eum odio aliquam dolor ad voluptas expedita consequuntur aperiam inventore eaque.
+                Dolorum facilis aut eum a delectus. Fugit velit quas harum quisquam amet provident inventore.
+                Repudiandae repudiandae delectus.
+            </p>
+            <div class="row">
+                <!-- USER TEAM -->
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../img/person.png" class="img-fluid rounded-circle w-50">
+                            <h3>Christian Roberto Ticas Guerrero</h3>
+                            <p>
+                                Dolor modi repudiandae quia beatae consectetur? Nam ullafugit ullam, accusamus! Totam
+                                mollitia eveniet!
+                            </p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../img/person.png" class="img-fluid rounded-circle w-50">
+                            <h3>Irvin Alexis Torres Cabrera</h3>
+                            <p>
+                                Dolor modi repudiandae quia beatae consectetur? Nam ullafugit ullam, accusamus! Totam
+                                mollitia eveniet!
+                            </p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../img/person.png" class="img-fluid rounded-circle w-50">
+                            <h3>Esdras Nehemias Cortez Mata</h3>
+                            <p>
+                                Dolor modi repudiandae quia beatae consectetur? Nam ullafugit ullam, accusamus! Totam
+                                mollitia eveniet!
+                            </p>
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="p-3">
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container p-3">
+            <div class="row text-center text-white">
+                <div class="col ml-auto">
+                    <p>Copyright &copy; 2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <!-- CANVAS SCRIPTS
+    <script src="js/colitions.js"></script>-->
 </body>
+
 </html>
