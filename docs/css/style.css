@@ -1,3 +1,7 @@
+body{
+    background-color: aquamarine;
+}
+
 canvas {
     box-sizing: border-box;
     margin: 0;
