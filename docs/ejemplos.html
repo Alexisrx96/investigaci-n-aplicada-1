@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Canvas</title>
-    <!-- BOOTSTRAP CSS -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/stile.css">
+        <script src="js/implements.js"></script>
+        <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style_Ejemplos.css">
+
+    <script src="js/implements.js"></script>
+    </head>
 
 <body>
+    
+
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container">
@@ -61,6 +65,7 @@
                         <p>¡Dibuja con comandos! Canvas es un elemento de HTML, el cual permite dibujar gráficos
                             mediante secuencias de comandos (comunmente JavaScript).
                         </p>
+
                         <a href="#" class="btn btn-outline-secondary btn-lg text-white">
                             Read More
                         </a>
@@ -76,28 +81,57 @@
     <!-- ABOUT -->
     <section class="m5 text-center bg-light">
         <div class="container">
-            <div class="row" onload="draw();">
-                <div class="m-5" onload="draw();">
+            <div class="row">
+                <div class="m-5">
                     <h3>¿Qué puedo hacer con canvas?</h3>
                     <p>
-                        Existen multiples aplicaciones y utilidades para canvas, puesdes crear maravillosos paisajes o
-                        retratos a base de código, sin embargo, si lo tuyo son las matemáticas y las estadísticas,
-                        puedes
-                        utilizar canvas para representar gráficos matemáticos o estadísticos en tiempo real; por otro
-                        lado,
-                        si las físicas se te dan bien o quieres poner a prueba tus conocimientos puesdes crear un
-                        simulador,
-                        así comprobar cómo afectaría al cambiar ciertos parámetros; sin embargo, si estos ejemplos no
-                        cubren
-                        tus necesidades y deseas algo más, puedes crear videojuegos, dependiendo de lo que necesites,
-                        puedes
-                        crear personajes importando y recortando imágenes para utilizarlos como sprites.
+
+                        Este es uno de los ejemplos de lo que es posible hacer con canvas, como se puede observar en la parte de abajo hay dos triangulos
+                        uno esta dibujado estaticamente mientras que el otro gira en su propio eje gracias a comandos
+                        de animacion, es posible hacer muchas figuras y dibujos, hasta poder llegar a hacer dibujos complejos como lo pueden ser
+                        paisajes animados, o personajes de television o caricaturas, canvas por medio de Java Script ofrece varias herramientas de
+                        trazado y dibujo, con ello se lleva acabo estos tipos de animaciones y trazados.
+                        
                     </p>
+
+                    <h3>¿Como se hace?</h3>
+
+                    <p>
+
+                        Como se ha mencionado en el parrafo anterior, gracias la etiqueta canvas en HTML y Java Script se puede hacer este tipo de dibujos
+                        y es una serie de codigos extensos que tendria que verse paso a paso para comprender al 100%, pero se dara una breve explicacion.
+
+                    </p>
+
+                    <p class="texto">
+
+                        - Para comenzar se crea la etiqueta CANVAS en HTML y se define el tamaño de largo y ancho
+                        <br>
+                        - se procede a crear el documento js(Java Script)
+                        <br>
+                        - Se vicula Java Script y se crea una funcion donde se dibujara por medio de trazados
+                        <br>
+                        - Para comenzar a crear un trazado se define la 
+
+                    </p>
+
+                    <div class="containerCanvas">
+            
+                        <canvas class="canvas2" id="cv" width="350" height="350"></canvas>
+                
+                        <canvas class="canvas2" id="canvas" width="400" height="400"></canvas>
+                
+                    </div>
+                    
                     
                 </div>
 
             </div>
+
+           
         </div>
+
+        
     </section>
 
     <footer>
@@ -123,6 +157,7 @@
 
     <!-- CANVAS SCRIPTS
     <script src="js/colitions.js"></script>-->
+        
 </body>
 
 </html>
