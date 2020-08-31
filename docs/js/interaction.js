@@ -12,11 +12,12 @@ window.addEventListener('mousemove',
 (event)=>{
     mouse.x= event.x;
     mouse.y= event.y;
-})
-window.addEventListener('resize',()=>{
-    canvas.width=window.innerWidth;
-    canvas.height=window.innerHeight;
-})
+});
+addEventListener('resize',()=>{
+    canvas.width=innerWidth>500?innerWidth:500;
+    canvas.height=innerHeight>500?innerHeight:500;
+    init();
+});
 class Circle {
     constructor(x, y, dx, dy, radius, color) {
         this.x = x;
@@ -59,21 +60,28 @@ class Circle {
         }
     }
 }
-let c = canvas.getContext('2d');
-let hideTrail = true;
-let maxRadius = 50;
-let minRadius = 5;
-let circles = [];
-for (let index = 0; index < 500; index++) {
-    let radius = minRadius;
-    let x = Math.random() * (innerWidth - radius * 2) + radius;
-    let dx = Math.random() -0.5;
-    let y = Math.random() * (innerHeight - radius * 2) + radius;
-    let dy = Math.random() -0.5;
-    let color = getRandomHexColor();
-    circles.push(new Circle(x,y,dx,dy,radius,color));
+let c;
+let hideTrail;
+let maxRadius;
+let minRadius;
+let circles;
+init = ()=>{
+    let c = canvas.getContext('2d');
+    let hideTrail = true;
+    let maxRadius = 50;
+    let minRadius = 5;
+    let circles = [];
+    for (let index = 0; index < 500; index++) {
+        let radius = minRadius;
+        let x = Math.random() * (innerWidth - radius * 2) + radius;
+        let dx = Math.random() -0.5;
+        let y = Math.random() * (innerHeight - radius * 2) + radius;
+        let dy = Math.random() -0.5;
+        let color = getRandomHexColor();
+        circles.push(new Circle(x,y,dx,dy,radius,color));
+    }
+    circles.forEach(circle=>{circle.draw();});
 }
-circles.forEach(circle=>{circle.draw();})
 function animate(){
     if(hideTrail){
         c.clearRect(0,0, innerWidth, innerHeight)

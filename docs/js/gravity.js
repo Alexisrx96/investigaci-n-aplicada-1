@@ -33,9 +33,10 @@ addEventListener("mousemove", function(event) {
 	mouse.y = event.clientY;
 });
 
-addEventListener("resize", function() {
-	canvas.width = innerWidth;	
-	canvas.height = innerHeight;
+addEventListener('resize',()=>{
+    canvas.width=innerWidth>500?innerWidth:500;
+    canvas.height=innerHeight>500?innerHeight:500;
+    init();
 });
 
 addEventListener("mousedown", function(event) {
