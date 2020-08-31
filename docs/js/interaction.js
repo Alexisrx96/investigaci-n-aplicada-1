@@ -65,13 +65,16 @@ let hideTrail;
 let maxRadius;
 let minRadius;
 let circles;
-init = ()=>{
-    let c = canvas.getContext('2d');
-    let hideTrail = true;
-    let maxRadius = 50;
-    let minRadius = 5;
-    let circles = [];
-    for (let index = 0; index < 500; index++) {
+function init() {
+    hideTrail = true;
+    maxRadius = 50;
+    minRadius = 5;
+    let area= Math.floor(Math.pow(maxRadius*2,2));
+    let particleAmount = Math.floor(canvas.height*canvas.width/area/2);
+    particleAmount = particleAmount>0?particleAmount:1;
+    c = canvas.getContext('2d');
+    circles = [];
+    for (let index = 0; index < particleAmount; index++) {
         let radius = minRadius;
         let x = Math.random() * (innerWidth - radius * 2) + radius;
         let dx = Math.random() -0.5;
@@ -89,6 +92,7 @@ function animate(){
     requestAnimationFrame(animate);
     circles.forEach(circle=>{circle.update();})
 }
+init();
 animate();
 function getRandomHexColor() {
     let color='#';

@@ -114,10 +114,15 @@ function resetOnClick(){
 // Implementation
 var ballArray = [];
 var clicCount = 0;
+let maxRadius = 20;
 function init() {
+    let area= Math.floor(Math.pow(maxRadius*2,2));
+    particles = [];
+    let particleAmount = Math.floor(canvas.height*canvas.width/area/2);
+    particleAmount = particleAmount>0?particleAmount:1;
 	ballArray = [];
-	for (let i = 0; i < 600; i++) {
-		var radius = randomIntFromRange(8, 20);
+	for (let i = 0; i < particleAmount; i++) {
+		var radius = randomIntFromRange(8, maxRadius);
 		var x = randomIntFromRange(radius, canvas.width - radius);
 		var y = randomIntFromRange(0, canvas.height - radius);
 		var dx = randomIntFromRange(-3, 3)
