@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/stile.css">
-        <script src="js/implements.js"></script>
-        <!-- BOOTSTRAP CSS -->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/stile.css">
+    <script src="js/implements.js"></script>
+    <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- FONT AWESOME -->
@@ -14,10 +15,10 @@
     <link rel="stylesheet" href="css/style_Ejemplos.css">
 
     <script src="js/implements.js"></script>
-    </head>
+</head>
 
 <body>
-    
+
 
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -35,7 +36,7 @@
                         <a class="nav-link" href="#">¿Qué es canvas?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Equipo</a>
+                        <a class="nav-link" href="tutorial.html">Tutorial</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -46,7 +47,6 @@
                             <a class="dropdown-item" href="#">Gravedad</a>
                             <a class="dropdown-item" href="#">Colisión</a>
                             <a class="dropdown-item" href="#">Interacción</a>
-                            <a class="dropdown-item" href="file:///C:/Users/Admin/Desktop/git/investigaci-n-aplicada-1/docs/ejemplos.html">Ejemplos</a>
                         </div>
                     </li>
             </div>
@@ -86,10 +86,13 @@
                     <h3>¿Qué puedo hacer con canvas?</h3>
                     <p>
 
-                        Este es uno de los ejemplos de lo que es posible hacer con canvas, como se puede observar en la parte de abajo hay dos triángulos
+                        Este es uno de los ejemplos de lo que es posible hacer con canvas, como se puede observar en la
+                        parte de abajo hay dos triángulos
                         uno esta dibujado estáticamente mientras que el otro gira en su propio eje gracias a comandos
-                        de animación, es posible hacer muchas figuras y dibujos, hasta poder llegar a hacer dibujos complejos como lo pueden ser
-                        paisajes animados, o personajes de televisión o caricaturas, canvas por medio de Java Script ofrece varias herramientas de
+                        de animación, es posible hacer muchas figuras y dibujos, hasta poder llegar a hacer dibujos
+                        complejos como lo pueden ser
+                        paisajes animados, o personajes de televisión o caricaturas, canvas por medio de Java Script
+                        ofrece varias herramientas de
                         trazado y dibujo, con ello se lleva a cabo estos tipos de animaciones y trazados.
 
                     </p>
@@ -98,14 +101,17 @@
 
                     <p>
 
-                        Como se ha mencionado en el párrafo anterior, gracias la etiqueta canvas en HTML y Java Script se puede hacer este tipo de dibujos
-                        y es una serie de códigos extensos que tendría que verse paso a paso para comprender al 100%, pero se dará una breve explicación.
+                        Como se ha mencionado en el párrafo anterior, gracias la etiqueta canvas en HTML y Java Script
+                        se puede hacer este tipo de dibujos
+                        y es una serie de códigos extensos que tendría que verse paso a paso para comprender al 100%,
+                        pero se dará una breve explicación.
 
                     </p>
 
                     <p class="texto">
 
-                        - Para comenzar se crea la etiqueta CANVAS en HTML y se define el tamaño de largo y ancho también un ID para reconocerlo         
+                        - Para comenzar se crea la etiqueta CANVAS en HTML y se define el tamaño de largo y ancho
+                        también un ID para reconocerlo
                         <br>
                         <br>
                         - se procede a crear el dócumento js(Java Script)
@@ -117,56 +123,70 @@
                         - Se vincula Java Script y se crea una función donde se dibujara por medio de trazados
                         <br>
                         <br>
-                        - Para comenzar a crear un trazado se define la función que será la que reconozca HTML al compilar en este caso "Init()"
+                        - Para comenzar a crear un trazado se define la función que será la que reconozca HTML al
+                        compilar en este caso "Init()"
                         <br>
                         <br>
-                        - Luego se crea dos variables, una para el que contendrá el canvas y otra para el contexto del canvas y el tipo de dibujo, que será 2D
+                        - Luego se crea dos variables, una para el que contendrá el canvas y otra para el contexto del
+                        canvas y el tipo de dibujo, que será 2D
                         <br>
                         <br>
-                        - A continuación se comienza a trabajar con los trazos y para ello se llama a la variable context y se usa la función beginPath para comenzar el nuevo trazo
+                        - A continuación se comienza a trabajar con los trazos y para ello se llama a la variable
+                        context y se usa la función beginPath para comenzar el nuevo trazo
                         <br>
                         <br>
-                        - Se llama a context y a la función moveTo para dar coordenadas de que posición principal debe tener ese trazado
+                        - Se llama a context y a la función moveTo para dar coordenadas de que posición principal debe
+                        tener ese trazado
                         <br>
                         <br>
-                        - Luego se llama a la variable contexto y se llama a la función LineTo que define un trazado este con coordenadas X, Y con parámetros de 200 y 350
+                        - Luego se llama a la variable contexto y se llama a la función LineTo que define un trazado
+                        este con coordenadas X, Y con parámetros de 200 y 350
                         <br>
                         <br>
                         - Se vuelve a llamar a la variable contexto y la función de trazado
                         <br>
                         <br>
-                        - Se llama a contexto y se llama a la funcion fillStyle que dará un estilo de relleno de color verde claro
+                        - Se llama a contexto y se llama a la funcion fillStyle que dará un estilo de relleno de color
+                        verde claro
                         <br>
                         <br>
-                        - Por último se llama a la variable contexto y a la vez se llama a la función que dará el relleno (fill).
+                        - Por último se llama a la variable contexto y a la vez se llama a la función que dará el
+                        relleno (fill).
                         <br>
                         <br>
                         <br>
                         <b>(Figura celeste)</b>
                         <br>
                         <br>
-                        - Para comenzar a crear la figura celeste se crean dos variables una que tendrá el ID canvas y la otra variable que tendrá el contexto
+                        - Para comenzar a crear la figura celeste se crean dos variables una que tendrá el ID canvas y
+                        la otra variable que tendrá el contexto
                         <br>
                         <br>
-                        - Dentro de este canvas se llama a la función que contiene la figura verde para que la dibuje, de otra manera es imposible visualizarla
+                        - Dentro de este canvas se llama a la función que contiene la figura verde para que la dibuje,
+                        de otra manera es imposible visualizarla
                         <br>
                         <br>
-                        - Se llama a la variable ctx y se borra todas las rectas del canvas o trazados para que se re-dibujen
+                        - Se llama a la variable ctx y se borra todas las rectas del canvas o trazados para que se
+                        re-dibujen
                         <br>
                         <br>
                         - Se llama a la variable ctx y se llama a la función beginPath para comenzar a crear trazados
                         <br>
                         <br>
-                        - Se llama a la variable ctx y se llama a la función moveTo para comenzar a dibujar desde un punto específico
+                        - Se llama a la variable ctx y se llama a la función moveTo para comenzar a dibujar desde un
+                        punto específico
                         <br>
                         <br>
-                        - Se llama a la variable ctx y se llama a la función lineTo para crear un trazado con las coordenadas x, Y. Y se hace lo mismo con el siguiente LineTo
+                        - Se llama a la variable ctx y se llama a la función lineTo para crear un trazado con las
+                        coordenadas x, Y. Y se hace lo mismo con el siguiente LineTo
                         <br>
                         <br>
-                        - Se llama a la variable ctx y luego a la función translate para que pueda girar sobre su propio eje
+                        - Se llama a la variable ctx y luego a la función translate para que pueda girar sobre su propio
+                        eje
                         <br>
                         <br>
-                        - Se llama la función rotate con este será posible dar la animación de rotación, este esta convertido de radianes a grados
+                        - Se llama la función rotate con este será posible dar la animación de rotación, este esta
+                        convertido de radianes a grados
                         <br>
                         <br>
                         - Luego se da un relleno de estilo con la función fillStyle color azul claro
@@ -175,28 +195,28 @@
                         - Para rellenarlo se llama a la función fill y se rellena desde el trazado inicial al final
                         <br>
                         <br>
-                        - por último se llama al método windowns y a la función requestAnimationFrame que será una animación y este necesita una función y para ello se le manda por parámetro
-                        a draw y se genera un bucle               
+                        - por último se llama al método windowns y a la función requestAnimationFrame que será una
+                        animación y este necesita una función y para ello se le manda por parámetro
+                        a draw y se genera un bucle
 
                     </p>
 
                     <div class="containerCanvas">
-            
+
                         <canvas class="canvas2" id="cv" width="350" height="350"></canvas>
-                
+
                         <canvas class="canvas2" id="canvas" width="400" height="400"></canvas>
-                
+
                     </div>
-                    
-                    
+
+
                 </div>
 
             </div>
 
-           
         </div>
 
-        
+
     </section>
 
     <footer>
@@ -222,7 +242,7 @@
 
     <!-- CANVAS SCRIPTS
     <script src="js/colitions.js"></script>-->
-        
+
 </body>
 
 </html>
